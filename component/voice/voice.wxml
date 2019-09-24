@@ -1,0 +1,17 @@
+
+<view class='audiosBox'>
+    <view class="audioOpen" bindtap="listenerButtonPlay" wx:if="{{!isOpen}}">
+      <image class='image2' src="/images/bofang.png" />
+    </view>
+    <view class="audioOpen" bindtap="listenerButtonPause" wx:if="{{isOpen}}">
+      <image src="/images/bofang2.png" />
+    </view>
+    <view class='slid'>
+      <slider bindchange="sliderChange"  block-size="12px" step="2" value="{{offset}}" block-color="#EA7575" activeColor="#EA7575" />
+      <view>
+        <text class='times'>{{starttime}}</text>  
+       
+        <text class='times'>{{duration}}</text>    
+      </view>
+    </view>
+</view>
